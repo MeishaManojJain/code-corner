@@ -18,31 +18,31 @@ int main()
     }
 
     // set high and low
-    int lo = 0, hi = nums.size() - 1;
-    int answer = -1;
+    int lb = 0, hb = nums.size() - 1;
+    int ans = -1;
 
-    while (lo <= hi)
+    while (lb <= hb)
     {
-        int mid = (lo + hi) / 2;
+        int mid = (lb + hb) / 2;
 
         if (nums[mid] == target)
         {
-            answer = mid;
+            ans = mid;
             break;
         }
 
         if (nums[mid] < target)
         {
-            lo = mid + 1;
+            lb = mid + 1;
         }
         else
         {
-            hi = mid - 1;
+            hb = mid - 1;
         }
     }
 
     // output
-    cout << answer << endl;
+    cout << ans << endl;
 
     return 0;
 }
