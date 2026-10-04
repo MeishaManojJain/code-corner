@@ -4,17 +4,18 @@ using namespace std;
 
 int main()
 {
-    // input
-    int target, n;
-    cin >> target >> n;
+    // input target
+    int target;
+    cin >> target;
 
-    // Make a ector
-    vector<int> nums(n);
+    // make a vector
+    vector<int> nums;
+    int num;
 
     // input vector
-    for (int i = 0; i < n; i++)
+    while (cin >> num)
     {
-        cin >> nums[i];
+        nums.push_back(num);
     }
 
     // set high and low
